@@ -1,6 +1,8 @@
 import Header from '@components/Header'
 import Hero from '@components/Hero'
 import About from '@components/About'
+import MissionVisionValues from '@components/MissionVisionValues'
+import Services from '@components/Services'
 
 function App() {
 
@@ -9,6 +11,8 @@ function App() {
       <Header />
       <Hero />
       <About />
+      <MissionVisionValues />
+      <Services />
     </div>
   )
 }
