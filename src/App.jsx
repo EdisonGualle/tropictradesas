@@ -3,6 +3,7 @@ import Hero from '@components/Hero'
 import About from '@components/About'
 import MissionVisionValues from '@components/MissionVisionValues'
 import Services from '@components/Services'
+import ContactBudget from '@components/ContactBudget'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <About />
       <MissionVisionValues />
       <Services />
+      <ContactBudget />
     </div>
   )
 }
