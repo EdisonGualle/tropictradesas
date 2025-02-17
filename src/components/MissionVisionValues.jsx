@@ -1,6 +1,6 @@
 const MissionVisionValues = () => {
     return (
-        <section className="bg-white py-16 px-4 sm:px-8 md:px-12 lg:px-16">
+        <section id="nosotros" className="bg-white py-16 px-5">
             <div className="max-w-7xl mx-auto"> {/* Aumenté el ancho máximo a max-w-7xl */}
                 {/* Contenedor de 3 columnas con mejor proporción */}
                 <div className="grid md:grid-cols-3 gap-x-6 gap-y-12 items-center"> {/* Reduje el espacio entre columnas */}
@@ -8,7 +8,7 @@ const MissionVisionValues = () => {
                     <div className="text-center flex flex-col h-full">
                         <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 relative group">
                             <img
-                                src="/icons/Icon-Mision.png"
+                                src="https://exporbanalva.com/wp-content/uploads/2022/04/Icon-Mision.png"
                                 alt="Misión"
                                 className="w-full h-full transition-transform duration-300 group-hover:-translate-y-1 mb-8"
                             />
@@ -24,7 +24,7 @@ const MissionVisionValues = () => {
                     <div className="text-center flex flex-col h-full">
                         <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 relative group">
                             <img
-                                src="/icons/Icon-Vision.png"
+                                src="https://exporbanalva.com/wp-content/uploads/2022/04/Icon-Vision.png"
                                 alt="Visión"
                                 className="w-full h-full transition-transform duration-300 group-hover:-translate-y-1 mb-8"
                             />
@@ -40,7 +40,7 @@ const MissionVisionValues = () => {
                     <div className="text-center flex flex-col h-full">
                         <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 relative group">
                             <img
-                                src="/icons/Icon-Valores.png"
+                                src="https://exporbanalva.com/wp-content/uploads/2022/04/Icon-Valores.png"
                                 alt="Valores"
                                 className="w-full h-full transition-transform duration-300 group-hover:-translate-y-1 mb-8"
                             />
