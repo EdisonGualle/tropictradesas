@@ -131,7 +131,7 @@ const Footer = () => {
             {/* Línea divisoria */}
             <hr className="border-green-900 my-10  mx-auto" />
 
-            <div className="max-w-6xl mx-auto px-6 text-center">
+            <div className="max-w-7xl mx-auto px-6 text-center">
 
                 {/* Botón para volver arriba */}
                 <div className="flex justify-center mb-5">
@@ -143,7 +143,7 @@ const Footer = () => {
                 </div>
 
                 {/* Información de derechos y enlaces */}
-                <p className="text-sm">
+                <p className="text-base ">
                     © {new Date().getFullYear()} Todos los derechos reservados{" "}
                     <a href="https://tropictradesas.com" target="_blank" rel="noopener noreferrer" className="font-bold">
                         tropictradesas.com
@@ -155,8 +155,8 @@ const Footer = () => {
                 </p>
 
                 {/* Políticas y mapa del sitio */}
-                <div className="mt-2">
-                    <a href="/politica-privacidad" className="text-amber-300 hover:underline text-sm">
+                <div className="mt-2 ">
+                    <a href="/politica-privacidad" className="text-amber-300 hover:underline text-base ">
                         Política de privacidad y cookies
                     </a>
                 </div>
