@@ -1,14 +1,5 @@
 import PropTypes from "prop-types";
 
-ProjectsGrid.propTypes = {
-  projects: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-    })
-  ),
-};
-
 // Define un array de rutas de imágenes (todas apuntan a la misma imagen por defecto)
 const imagePaths = [
   "/src/assets/images/defecto.png",
@@ -76,6 +67,16 @@ const ProjectsGrid = ({ projects = projectsData }) => {
     </section>
   );
 };
+
+ProjectsGrid.propTypes = {
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      image: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ),
+};
+
 
 // Exporta el componente para poder usarlo en otros archivos
 export default ProjectsGrid;
