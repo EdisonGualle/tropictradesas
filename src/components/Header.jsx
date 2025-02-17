@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 import { RiWhatsappLine } from "react-icons/ri";
 import { useState, useEffect } from "react";
 
-// import logo from '@images/logo.png';
+// import logo from '/public/logo.png';
 
 
 const Header = () => {
@@ -49,7 +49,7 @@ const Header = () => {
     return (
         <header
             className={`w-full z-50 transition-all duration-500 ease-in-out fixed top-0 left-0 
-            ${isScrolled ? "bg-[#466233]/85 backdrop-blur-sm shadow-md" : "bg-[#466233] bg-opacity-100"}`}>
+            ${isScrolled ? "bg-[#466233]/91 backdrop-blur-sm shadow-md" : "bg-[#466233] bg-opacity-100"}`}>
 
             <nav className={`flex items-center px-20 py-3 transition-all duration-300 
                 ${isScrolled ? "my-0" : "my-3"}`}>

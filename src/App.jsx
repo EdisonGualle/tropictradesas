@@ -6,6 +6,7 @@ import Services from '@components/Services'
 import ContactBudget from '@components/ContactBudget'
 
 import Footer from '@components/Footer'
+import Contact from '@components/Contact'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <MissionVisionValues />
       <Services />
       <ContactBudget />
+      <Contact />
       <Footer />
     </div>
   )
