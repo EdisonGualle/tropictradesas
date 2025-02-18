@@ -30,6 +30,8 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          ls -la ~/.ssh/   # 🔹 Agrega esto para verificar si la clave se guardó
+          cat ~/.ssh/id_rsa | head -n 5  # 🔹 Imprime solo las primeras líneas para depuración
         shell: bash
 
       - name: Deploy to Hostinger via Rsync
