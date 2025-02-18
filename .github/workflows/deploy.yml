@@ -34,6 +34,7 @@ jobs:
           head -n 5 ~/.ssh/id_rsa  # 🔹 Muestra las primeras líneas de la clave privada para depuración
         shell: bash
 
+
       - name: Deploy to Hostinger via Rsync
         run: rsync -e "ssh -p 65002" -avz --delete dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USER }}/public_html/
 
