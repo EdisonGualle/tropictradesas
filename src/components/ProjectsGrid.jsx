@@ -77,6 +77,5 @@ ProjectsGrid.propTypes = {
   ),
 };
 
-
 // Exporta el componente para poder usarlo en otros archivos
 export default ProjectsGrid;
