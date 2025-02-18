@@ -35,5 +35,6 @@ jobs:
         shell: bash
 
       - name: Deploy to Hostinger via Rsync
-        run: rsync -e "ssh -p 65002" -avz --delete dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/public_html/
+        run: rsync -e "ssh -p 65002" -avz --delete dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USER }}/public_html/
+
 
