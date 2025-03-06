@@ -4,7 +4,7 @@ const ContactBudget = () => {
   return (
     <div id="servicios" className="relative w-full h-[500px]">
       {/* Left Content */}
-      <div className="absolute left-0 w-1/2 h-full px-[130px] py-16 flex flex-col justify-center bg-[#4C6739] pr-16">
+      <div className="absolute left-0 w-1/2 h-full px-[130px] py-16 flex flex-col justify-center bg-[#1b1464] pr-16">
         <h1 className="text-[42px] font-semibold text-white mb-6 leading-[48px]">
           Solicita un presupuesto
         </h1>

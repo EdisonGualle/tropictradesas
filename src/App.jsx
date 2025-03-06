@@ -9,6 +9,7 @@ import OurBrands from '@components/OurBrands'
 import Footer from '@components/Footer'
 import Contact from '@components/Contact'
 import ExportCountries from '@components/ExportCountries'
+import LocationSection from './components/LocationSection'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <ExportCountries />
       <ProjectsGrid />
       <OurBrands />
+      <LocationSection />
       <Contact />
       <Footer />
     </div>

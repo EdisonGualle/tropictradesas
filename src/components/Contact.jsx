@@ -11,7 +11,7 @@ const Contact = () => {
     return (
         <section id="contacto" className="max-w-5xl mx-auto px-6 py-20">
             <h3 className="text-center text-gray-700 text-[22px] leading-6">¿Tienes alguna pregunta?</h3>
-            <h2 className="text-center text-[26px] font-bold text-[#466233] my-3">
+            <h2 className="text-center text-[26px] font-bold text-[#1b1464] my-3">
                 ENVÍANOS UN MENSAJE A TRAVÉS DE ESTE FORMULARIO DE CONTACTO
             </h2>
 

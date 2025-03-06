@@ -1,9 +1,7 @@
 import { Link } from "react-scroll";
 import { RiWhatsappLine } from "react-icons/ri";
 import { useState, useEffect } from "react";
-
-// import logo from '/public/logo.png';
-
+import logo from '/public/logo.png'; // Asegúrate de que esta ruta sea correcta
 
 const Header = () => {
     const [activeSection, setActiveSection] = useState("inicio");
@@ -49,17 +47,27 @@ const Header = () => {
     return (
         <header
             className={`w-full z-50 transition-all duration-500 ease-in-out fixed top-0 left-0 
-            ${isScrolled ? "bg-[#466233]/91 backdrop-blur-sm shadow-md" : "bg-[#466233] bg-opacity-100"}`}>
+            ${isScrolled ? "bg-[#1b1464]/91 backdrop-blur-sm shadow-md" : "bg-[#1b1464] bg-opacity-100"}`}
+        >
 
             <nav className={`flex items-center px-20 py-3 transition-all duration-300 
                 ${isScrolled ? "my-0" : "my-3"}`}>
-                {/* <img src={logo} alt="TropicTrade Logo" className="h-16" /> */}
+                
+                {/* Logo de TropicTrade */}
+                <img 
+                    src="public/logo.png" // Asegúrate de actualizar esta ruta
+                    alt="TropicTrade Logo"
+                    className="h-8 mr-2" // Ajusta el tamaño del logo y el espacio entre el logo y el texto
+                />
+
+                {/* Nombre de la empresa */}
                 <span className={`font-bold text-amber-300 transition-all duration-300 
                     ${isScrolled ? "text-2xl" : "text-4xl"}`}>
                     TropicTrade
                 </span>
+
                 <div className="hidden md:flex items-center space-x-10 ml-auto me-10">
-                    {[
+                    {[ 
                         { id: "inicio", label: "Inicio" },
                         { id: "nosotros", label: "Nosotros" },
                         { id: "servicios", label: "Servicios" },
@@ -80,9 +88,10 @@ const Header = () => {
                         </Link>
                     ))}
                 </div>
+
                 <button
                     onClick={handleWhatsAppClick}
-                    className="flex justify-center gap-1 items-center bg-green-400 text-white font-medium px-6 py-2 rounded-full hover:bg-green-600"
+                    className="flex justify-center gap-1 items-center bg-green-500 text-white font-medium px-6 py-2 rounded-full hover:bg-green-600"
                 >
                     <RiWhatsappLine />
                     0993808146

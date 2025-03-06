@@ -1,15 +1,15 @@
 const brands = [
     {
       name: 'Majofruit Banana',
-      logo: 'https://exporbanalva.com/wp-content/uploads/2022/04/Img-Logo-Majorfruit.webp'
+      logo: 'src/assets/images/caja-banano.png'
     },
     {
       name: 'Banana Capital',
-      logo: 'https://exporbanalva.com/wp-content/uploads/2022/04/Img-Capital-Logo.webp'
+      logo: 'src/assets/images/caja-banano.png'
     },
     {
       name: 'Ecuban',
-      logo: 'https://exporbanalva.com/wp-content/uploads/2022/04/Img-Ecuban-Logo.webp'
+      logo: 'src/assets/images/caja-banano.png'
     }
   ];
   
@@ -17,8 +17,8 @@ const brands = [
     return (
       <section id="contacto" className="py-10 px-4 bg-gray-50"> {/* Reducido padding vertical a py-10 */}
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-[42px] leading-[42px] font-bold text-center text-[#3F5B2B] mb-16">
-            Nuestras marcas
+          <h2 className="text-[42px] leading-[42px] font-bold text-center text-[#1b1464] mb-16">
+            Nuestras Marcas
           </h2>
   
           <div className="flex flex-wrap justify-center gap-16">

@@ -43,8 +43,8 @@ const ExportCountries = () => {
     >
       {/* Contenedor principal con menos padding horizontal y más ancho */}
       <div className="relative z-10 max-w-full mx-auto px-2 sm:px-4 lg:px-[130px]">
-        <h2 className="text-[42px] font-semibold text-center text-[#3F5B2B] mb-16 leading-[48px]">
-          PAÍSES DE EXPORTACIÓN
+        <h2 className="text-[42px] font-bold text-center text-[#1b1464] mb-16 leading-[48px]">
+          Paises de Exportación
         </h2>
 
         {/* Ajuste de columnas con más separación entre tarjetas */}
@@ -66,7 +66,7 @@ const ExportCountries = () => {
 
               {/* Contenedor del texto (subido un poco más) */}
               <div className="w-[252px] h-[220px] flex flex-col justify-start text-center">
-                <h3 className="text-[26px] leading-[30px] font-bold text-[#3F5B2B] mb-1">
+                <h3 className="text-[26px] leading-[30px] font-bold text-[#1b1464] mb-1">
                   {country.name}
                 </h3>
                 <p className="text-gray-600 text-[16px] leading-[28px] px-2">
