@@ -13,7 +13,7 @@ const About = () => {
                     </h2>
                     <div className="w-32 h-2 bg-amber-300 mt-2 mb-5"></div>
                     <p className="text-base leading-7">
-                        TropicTrade, <span className="font-bold italic">Exportadora de Banano</span>, es una empresa emergente formada por un equipo de expertos en la producción, calidad, comercialización y exportación de banano convencional Ecuban, baby banana y frutas exóticas, productos que solo se cultivan en la Costa del Pacífico Ecuatoriano debido a sus características únicas.
+                        TropicTrade, <span className="font-bold italic">Exportadora de Banano</span>, es una empresa emergente formada por un equipo de expertos en la producción, calidad, comercialización y exportación de banano convencional, productos que solo se cultivan en la Costa del Pacífico Ecuatoriano debido a sus características únicas.
                     </p>
                     <p className="mt-6 text-base leading-7">
                         La amplia experiencia del equipo interno de la compañía es su mejor carta de presentación, garantizando productos que cumplen con los más altos estándares de calidad exigidos por clientes en todo el mundo.

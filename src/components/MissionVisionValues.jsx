@@ -8,7 +8,7 @@ const MisionVisionValores = () => {
         },
         {
             title: "Visión",
-            text: "Llegar a posicionarse como una exportadora de primer nivel, que tenga excelente aceptación en los mercados de consumo a nivel mundial, y uno de nuestros principales objetivos en EXPORBANALVA es retribuir a la comunidad.",
+            text: "Posicionarnos como una exportadora de aceptación en los mercados de consumo mundial, por los altos estándares de calidad de la fruta exportada y el compromiso de retribución con la comunidad.",
             icon: "🌍",
             color: "from-green-500 to-teal-600",
         },

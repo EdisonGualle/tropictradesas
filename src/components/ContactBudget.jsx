@@ -10,8 +10,7 @@ const ContactBudget = () => {
         </h1>
 
         <p className="text-[18px] leading-[28px] text-white/90 mb-12 max-w-fit text-justify ml-auto">
-          Contáctanos y nuestro equipo de ventas te asesorarán para encontrar la solución completa que estás buscando para tu negocio.
-        </p>
+          Contáctanos y nuestro equipo experto en exportación de banano te ofrecerá la mejor solución para satisfacer tus necesidades y potenciar el crecimiento de tu negocio.        </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
           <a
