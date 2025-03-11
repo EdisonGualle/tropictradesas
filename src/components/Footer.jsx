@@ -7,7 +7,7 @@ import {
     RiWhatsappLine,
     RiSquareFill
 } from "react-icons/ri";
-import logo from "/public/logo-completo.png";
+import logo from "/logo-completo.png";
 
 const Footer = () => {
     const navigate = useNavigate();
@@ -148,10 +148,10 @@ const Footer = () => {
                 </p>
 
                 {/* Políticas */}
-                <div className="flex items-center justify-center mt-2 gap-1">
+                <div className=" mt-2 ">
                     <a href="/politica-de-privacidad" className="text-amber-300 hover:underline">
                         Política de privacidad
-                    </a> |
+                    </a> | { " "}
 
                     <a href="/mapa-del-sitio" className="text-amber-300 hover:underline">
                         Mapa del sitio

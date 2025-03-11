@@ -1,16 +1,18 @@
 export const SEO_CONFIG = {
-    siteName: "TropicTrade - Exportación de Banano",
+    siteName: "TropicTrade - Exportación de Banano de Calidad desde Ecuador",
     siteUrl: "https://tropictradesas.com/",
-    description: "Empresa ecuatoriana dedicada a la exportación de banano con los más altos estándares de calidad.",
-    keywords: "exportación, banano, Ecuador, frutas tropicales, comercio internacional",
+    description: "TropicTrade exporta banano desde Ecuador con estándares de calidad premium. Distribución confiable a nivel internacional.",
+    keywords: "TropicTrade, tropictradesas,tropic trade, tropic trade ecuador, exportación de banano, proveedor de banano Ecuador, frutas tropicales, comercio internacional, exportación agrícola",
     author: "TropicTrade",
 
-    // ✅ Imagen para compartir en redes sociales
-    ogImage: "https://tropictradesas.com/caja-banano.png",
+    ogImage: "/caja-banano.png",
 
-    // ✅ Imagen del logo
-    logo: "https://tropictradesas.com/logo-completo.png",
+    logo: "/logo-completo.png",
+    favicon: "/favicon.ico",
 
     twitterCard: "summary_large_image",
     twitterSite: "@TropicTrade",
+    twitterCreator: "@TropicTrade",
+
+    locale: "es_EC"
 };

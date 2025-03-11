@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import { RiArrowRightSLine } from "react-icons/ri";
+import cajabanano from "/caja-banano.png";
 const About = () => {
     return (
         <section className="bg-white py-20 px-6 sm:px-12 lg:px-20">
@@ -32,7 +33,7 @@ const About = () => {
                 {/* Imagen alineada correctamente */}
                 <div className="w-full md:w-1/2 flex justify-center md:justify-end">
                     <img
-                        src="../../public/caja-banano.png"
+                        src={cajabanano}
                         alt="Proceso de exportación de banano"
                         className="rounded-3xl shadow-2xl hover:scale-105 transition-all duration-500 ease-in-out w-[90%] sm:w-3/4 md:w-[80%] lg:w-[75%] h-auto object-cover hover:shadow-[0_20px_50px_rgba(27,20,100,0.75)]"
                     />

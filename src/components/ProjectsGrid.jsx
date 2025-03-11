@@ -2,19 +2,29 @@ import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import PropTypes from "prop-types";
 import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
+import uno from "/src/assets/images/1.jpeg";
+import dos from "/src/assets/images/2.jpeg";
+import tres from "/src/assets/images/3.jpeg";
+import cuatro from "/src/assets/images/4.jpeg";
+import cinco from "/src/assets/images/5.jpeg";
+import seis from "/src/assets/images/6.jpeg";
+import siete from "/src/assets/images/7.jpeg";
+import ocho from "/src/assets/images/8.jpeg";
+import nueve from "/src/assets/images/9.jpeg";
+import diez from "/src/assets/images/10.jpeg";
 
 // Rutas de imágenes
 const imagePaths = [
-  "/src/assets/images/1.jpeg",
-  "/src/assets/images/2.jpeg",
-  "/src/assets/images/3.jpeg",
-  "/src/assets/images/4.jpeg",
-  "/src/assets/images/5.jpeg",
-  "/src/assets/images/6.jpeg",
-  "/src/assets/images/7.jpeg",
-  "/src/assets/images/8.jpeg",
-  "/src/assets/images/9.jpeg",
-  "/src/assets/images/10.jpeg",
+  uno,
+  dos,
+  tres,
+  cuatro,
+  cinco,
+  seis,
+  siete,
+  ocho,
+  nueve,
+  diez,
 ];
 
 const projectsData = imagePaths.map((path, index) => ({
@@ -37,7 +47,7 @@ const ProjectsGrid = ({ projects = projectsData }) => {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, );
+  },);
 
   const handleNextImage = () => {
     setSelectedImageIndex((prevIndex) => (prevIndex + 1) % projects.length);

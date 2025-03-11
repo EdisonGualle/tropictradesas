@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { RiWhatsappLine, RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import logo from "/public/logo.png";
+import logo from "/logo.png";
 
 const Header = () => {
     const [activeSection, setActiveSection] = useState("inicio");

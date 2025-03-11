@@ -1,12 +1,63 @@
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 import { RiMailLine, RiUser3Line, RiPhoneLine, RiMessage3Line } from "react-icons/ri";
+import { useState } from "react";
 
 const Contact = () => {
     const {
         register,
         handleSubmit,
         formState: { errors, isSubmitting },
+        reset,
     } = useForm();
+
+    const [notification, setNotification] = useState({ message: "", type: "" });
+
+    // Función para formatear texto (primera letra en mayúscula)
+    const capitalizeFirstLetter = (text) => {
+        return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+    };
+
+    const formatName = (name) => {
+        return name
+            .trim() 
+            .split(/\s+/) 
+            .slice(0, 3) 
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) 
+            .join(" "); 
+    };
+
+    // Validaciones y envío del formulario
+    const onSubmit = async (data) => {
+        try {
+            // Transformaciones
+            const formattedName = formatName(data.name);
+
+            const formattedSubject = capitalizeFirstLetter(data.subject.trim().substring(0, 20));
+            const formattedMessage = capitalizeFirstLetter(data.message.trim().substring(0, 500));
+
+            // Parámetros formateados
+            const templateParams = {
+                to_email: "info@tropictradesas.com",
+                from_name: formattedName,
+                reply_to: data.email,
+                phone: data.phone,
+                subject: formattedSubject,
+                message: formattedMessage,
+            };
+
+            await emailjs.send("service_suucajf", "template_di6mz7r", templateParams, "yRLjbdkKP0oUB7s62");
+
+            setNotification({ message: "Mensaje enviado correctamente.", type: "success" });
+            reset(); // Limpiar formulario
+        } catch (error) {
+            console.error("Error enviando el mensaje:", error);
+            setNotification({ message: "Error al enviar el mensaje. Intenta de nuevo.", type: "error" });
+        }
+
+        // Ocultar notificación después de 3 segundos
+        setTimeout(() => setNotification({ message: "", type: "" }), 3000);
+    };
 
     return (
         <section className="max-w-5xl mx-auto px-6 sm:px-12 lg:px-20 py-20">
@@ -17,8 +68,17 @@ const Contact = () => {
                 ENVÍANOS UN MENSAJE A TRAVÉS DE ESTE FORMULARIO DE CONTACTO
             </h2>
 
-            {/* Formulario */}
-            <form onSubmit={handleSubmit(() => { })} className="space-y-6">
+            {/* Notificación de éxito o error */}
+            {notification.message && (
+                <div
+                    className={`p-3 rounded-lg  text-center mb-4 ${notification.type === "success" ? "bg-green-100" : "bg-red-100"
+                        }`}
+                >
+                    {notification.message}
+                </div>
+            )}
+
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {/* Nombre */}
                     <div>
@@ -27,7 +87,11 @@ const Contact = () => {
                             <RiUser3Line className="absolute left-3 top-3 text-gray-400" />
                             <input
                                 type="text"
-                                {...register("name", { required: "El nombre es obligatorio" })}
+                                {...register("name", {
+                                    required: "El nombre es obligatorio",
+                                    validate: (value) =>
+                                        value.split(" ").length <= 4 || "Máximo 4 palabras",
+                                })}
                                 className="pl-10 border w-full p-3 rounded focus:outline-none focus:ring focus:ring-amber-300"
                                 placeholder="Nombre"
                             />
@@ -78,7 +142,10 @@ const Contact = () => {
                         <label className="block text-gray-700">Asunto</label>
                         <input
                             type="text"
-                            {...register("subject", { required: "El asunto es obligatorio" })}
+                            {...register("subject", {
+                                required: "El asunto es obligatorio",
+                                maxLength: { value: 50, message: "Máximo 50 caracteres" },
+                            })}
                             className="border w-full p-3 rounded focus:outline-none focus:ring focus:ring-amber-300"
                             placeholder="Asunto"
                         />
@@ -92,7 +159,10 @@ const Contact = () => {
                     <div className="relative">
                         <RiMessage3Line className="absolute left-3 top-3 text-gray-400" />
                         <textarea
-                            {...register("message", { required: "El mensaje no puede estar vacío" })}
+                            {...register("message", {
+                                required: "El mensaje no puede estar vacío",
+                                maxLength: { value: 500, message: "Máximo 500 caracteres" },
+                            })}
                             className="pl-10 border w-full p-3 rounded h-32 resize-none focus:outline-none focus:ring focus:ring-amber-300"
                             placeholder="Escribe tu mensaje..."
                         ></textarea>

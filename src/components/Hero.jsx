@@ -1,3 +1,5 @@
+import fondo from "../assets/videos/hero_fondo.mp4";
+
 const Hero = () => {
   return (
     <section
@@ -6,7 +8,7 @@ const Hero = () => {
       {/* Video de fondo */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="src/assets/videos/hero_fondo.mp4"
+        src={fondo}
         autoPlay
         loop
         muted

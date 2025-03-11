@@ -1,3 +1,6 @@
+import caja from "../assets/images/caja.jpeg";
+import procesoPrevio from "../assets/images/proceso-previo.jpeg";
+import productoExportacion from "../assets/images/producto-exportacion.jpeg";
 const Services = () => {
     return (
         <section className="py-16 px-6 sm:px-12 lg:px-20">
@@ -11,7 +14,7 @@ const Services = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full">
                     {/* Tarjeta 1 */}
                     <div className="bg-white shadow-md p-6 rounded-xl">
-                        <img src="src/assets/images/caja.jpeg" alt="Cajas de Banano" className="w-full h-[250px] sm:h-[280px] md:h-[323px] object-cover rounded-lg" />
+                        <img src={caja}  alt="Cajas de Banano" className="w-full h-[250px] sm:h-[280px] md:h-[323px] object-cover rounded-lg" />
                         <h3 className="text-2xl font-bold text-[#1b1464] mt-6">Cajas de Banano</h3>
                         <p className="text-gray-600 mt-4">
                             Buscamos cubrir las necesidades y promover el orgullo de trabajar en nuestros campos. Estos campos pertenecen a cada hombre y mujer que trabaja duro para traer lo más dulce y frutas frescas de la zona.
@@ -20,7 +23,7 @@ const Services = () => {
 
                     {/* Tarjeta 2 */}
                     <div className="bg-white shadow-md p-6 rounded-xl">
-                        <img src="src/assets/images/proceso-previo.jpeg" alt="Proceso previo al Embarque" className="w-full h-[250px] sm:h-[280px] md:h-[323px] object-cover rounded-lg" />
+                        <img src={procesoPrevio} alt="Proceso previo al Embarque" className="w-full h-[250px] sm:h-[280px] md:h-[323px] object-cover rounded-lg" />
                         <h3 className="text-2xl font-bold text-[#1b1464] mt-6">Proceso previo al Embarque</h3>
                         <p className="text-gray-600 mt-4">
                             Este paso es fundamental en el proceso de nuestro servicio ya que garantiza que el producto llegue en óptimas condiciones desde su partida hasta su llegada. Nuestro compromiso es brindar el mejor servicio con agilidad y calidad.
@@ -29,7 +32,7 @@ const Services = () => {
 
                     {/* Tarjeta 3 */}
                     <div className="bg-white shadow-md p-6 rounded-xl">
-                        <img src="src/assets/images/producto-exportacion.jpeg" alt="Producto de Exportación" className="w-full h-[250px] sm:h-[280px] md:h-[323px] object-cover rounded-lg" />
+                        <img src={productoExportacion} alt="Producto de Exportación" className="w-full h-[250px] sm:h-[280px] md:h-[323px] object-cover rounded-lg" />
                         <h3 className="text-2xl font-bold text-[#1b1464] mt-6">Producto de Exportación</h3>
                         <p className="text-gray-600 mt-4">
                             Nos encargamos de transportar productos de la mejor calidad para exportación, dejando en alto el nombre de nuestro país, Ecuador. ¡Gracias por preferirnos!
