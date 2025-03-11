@@ -9,7 +9,7 @@ const Contact = () => {
     } = useForm();
 
     return (
-        <section id="contacto" className="max-w-5xl mx-auto px-6 sm:px-12 lg:px-20 py-20">
+        <section className="max-w-5xl mx-auto px-6 sm:px-12 lg:px-20 py-20">
             <h3 className="text-center text-gray-700 text-lg sm:text-xl">
                 ¿Tienes alguna pregunta?
             </h3>

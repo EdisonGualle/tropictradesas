@@ -12,7 +12,7 @@ const Header = () => {
         const handleScroll = () => {
             const sections = ["inicio", "nosotros", "servicios", "proyectos", "contacto"];
             let currentSection = "inicio";
-
+    
             sections.forEach((section) => {
                 const sectionElement = document.getElementById(section);
                 if (sectionElement) {
@@ -22,14 +22,16 @@ const Header = () => {
                     }
                 }
             });
-
+    
             setActiveSection(currentSection);
             setIsScrolled(window.scrollY > 50);
         };
-
+    
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+    
+    
 
     const handleWhatsAppClick = () => {
         const phoneNumber = "593993808146";
@@ -42,7 +44,7 @@ const Header = () => {
         <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out 
             ${isScrolled ? "bg-[#1b1464]/91 backdrop-blur-md shadow-md" : "bg-[#1b1464]"}`}>
             
-            <nav className="flex items-center justify-between px-6 md:px-20 py-3">
+            <nav className="flex items-center justify-between px-6 md:ps-36 md:pe-28 py-3">
                 {/* Logo y Nombre */}
                 <div className="flex items-center space-x-3">
                     <img src={logo} alt="TropicTrade Logo" className="h-10 w-auto" />
@@ -96,7 +98,7 @@ const Header = () => {
             </nav>
 
             {/* Menú desplegable en móviles */}
-            <div className={`md:hidden fixed top-16 right-0 w-full bg-[#1b1464] transition-all duration-300 
+            <div className={`md:hidden fixed top-16 right-0 w-full bg-[#1b1464]/91  backdrop-blur-md transition-all duration-300 
                 ${isMenuOpen ? "h-auto opacity-100 py-5" : "h-0 opacity-0 pointer-events-none"}`}>
                 
                 <div className="flex flex-col items-center space-y-4">

@@ -36,7 +36,6 @@ const defaultFlag = "/icons/defecto.png";
 const ExportCountries = () => {
   return (
     <section
-      id="proyectos"
       className="relative py-20 bg-gray-50 px-6 sm:px-12 lg:px-20"
       style={{
         backgroundImage: `url('/icons/mapa-mundo.jpg')`,

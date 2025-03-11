@@ -73,14 +73,10 @@ const Footer = () => {
                     <div className="mb-6">
                         <p className="text-lg flex items-center justify-center md:justify-start gap-2 text-white">
                             <RiMailLine size={20} className="text-amber-300" />
-                            Emails:
+                            Correo:
                         </p>
                         {[
-                            "sales@tropictradesas.com",
-                            "operaciones@tropictradesas.com",
-                            "export@tropictradesas.com",
-                            "gestion@tropictradesas.com",
-                            "despacho@tropictradesas.com"
+                            "info@tropictradesas.com",
                         ].map((email, index) => (
                             <a key={index} href={`mailto:${email}`} className="block text-gray-300 hover:text-amber-300 transition">
                                 {email}

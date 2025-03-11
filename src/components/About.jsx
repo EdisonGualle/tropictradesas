@@ -3,7 +3,7 @@ import { RiArrowRightSLine } from "react-icons/ri";
 
 const About = () => {
     return (
-        <section id="nosotros" className="bg-white py-20 px-6 sm:px-12 lg:px-20">
+        <section className="bg-white py-20 px-6 sm:px-12 lg:px-20">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
                 
                 {/* Sección de texto alineada correctamente */}

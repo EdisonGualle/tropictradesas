@@ -15,7 +15,7 @@ const brands = [
 
 const OurBrands = () => {
   return (
-    <section id="contacto" className="py-16 px-6 sm:px-12 lg:px-20 bg-gray-50">
+    <section className="py-16 px-6 sm:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-center text-[#1b1464] mb-16">
           Nuestras Marcas

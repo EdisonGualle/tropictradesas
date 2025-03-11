@@ -1,7 +1,6 @@
 const Hero = () => {
   return (
     <section
-      id="inicio"
       className="relative h-screen w-full overflow-hidden flex items-center text-center md:text-left"
     >
       {/* Video de fondo */}

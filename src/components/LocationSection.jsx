@@ -1,4 +1,3 @@
-import React from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const LocationSection = () => {
@@ -45,13 +44,9 @@ const LocationSection = () => {
             <div className="flex justify-center mb-3">
               <FaEnvelope className="text-[#FFD700] text-5xl" />
             </div>
-            <h2 className="text-white font-bold text-xl mb-3">CORREOS</h2>
+            <h2 className="text-white font-bold text-xl mb-3">CORREO</h2>
             {[
-              "sales@tropictradesas.com",
-              "operaciones@tropictradesas.com",
-              "export@tropictradesas.com",
-              "gestion@tropictradesas.com",
-              "despacho@tropictradesas.com",
+              "info@tropictradesas.com",
             ].map((email, index) => (
               <p key={index} className="text-gray-300 text-sm">
                 <a href={`mailto:${email}`} className="text-[#FFD700] hover:underline">
