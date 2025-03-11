@@ -1,15 +1,15 @@
 const brands = [
   {
     name: "",
-    logo: "src/assets/images/caja-banano.png",
+    logo: "../../public/caja-banano.png",
   },
   {
     name: "",
-    logo: "src/assets/images/caja-banano.png",
+    logo: "../../public/caja-banano.png",
   },
   {
     name: "",
-    logo: "src/assets/images/caja-banano.png",
+    logo: "../../public/caja-banano.png",
   },
 ];
 

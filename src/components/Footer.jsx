@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
     RiArrowUpSLine,
     RiMapPin2Line,
@@ -10,10 +10,21 @@ import {
 import logo from "/public/logo-completo.png";
 
 const Footer = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const handleNavigation = (sectionId) => {
+        if (location.pathname !== "/") {
+            navigate(`/?scroll=${sectionId}`, { replace: true });
+        } else {
+            document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <footer className="bg-[#1b1464] text-white py-16 px-6 sm:px-12 lg:px-20">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-                
+
                 {/* Columna 1 - Información General */}
                 <div className="text-center md:text-left">
                     <p className="text-base leading-7 text-gray-300">
@@ -34,22 +45,25 @@ const Footer = () => {
                     <h4 className="text-xl font-bold mb-6 text-amber-300">PÁGINAS ÚTILES</h4>
                     <ul className="space-y-4 text-base">
                         {[
-                            { label: "QUIÉNES SOMOS", to: "nosotros" },
-                            { label: "SERVICIOS", to: "servicios" },
-                            { label: "PROYECTOS", to: "proyectos" },
-                            { label: "CONTACTO", to: "contacto" }
-                        ].map(({ label, to }, index) => (
+                            { label: "QUIÉNES SOMOS", id: "nosotros" },
+                            { label: "SERVICIOS", id: "servicios" },
+                            { label: "PROYECTOS", id: "proyectos" },
+                            { label: "CONTACTO", id: "contacto" }
+                        ].map(({ label, id }, index) => (
                             <li key={index} className="flex justify-center md:justify-start items-center gap-2">
                                 <RiSquareFill className="text-[8px] text-amber-300" />
-                                <Link to={to} smooth={true} duration={500} offset={-64} className="hover:underline cursor-pointer text-gray-300 hover:text-amber-300">
+                                <span
+                                    onClick={() => handleNavigation(id)}
+                                    className="hover:underline cursor-pointer text-gray-300 hover:text-amber-300"
+                                >
                                     {label}
-                                </Link>
+                                </span>
                             </li>
                         ))}
                         <li className="flex justify-center md:justify-start items-center gap-2">
                             <RiSquareFill className="text-[8px] text-amber-300" />
-                            <a href="/politica-de-privacidad-y-cookies" className="hover:underline text-gray-300 hover:text-amber-300">
-                                POLÍTICA DE PRIVACIDAD Y COOKIES
+                            <a href="/politica-de-privacidad" className="hover:underline text-gray-300 hover:text-amber-300">
+                                POLÍTICA DE PRIVACIDAD
                             </a>
                         </li>
                     </ul>
@@ -75,13 +89,9 @@ const Footer = () => {
                             <RiMailLine size={20} className="text-amber-300" />
                             Correo:
                         </p>
-                        {[
-                            "info@tropictradesas.com",
-                        ].map((email, index) => (
-                            <a key={index} href={`mailto:${email}`} className="block text-gray-300 hover:text-amber-300 transition">
-                                {email}
-                            </a>
-                        ))}
+                        <a href="mailto:info@tropictradesas.com" className="block text-gray-300 hover:text-amber-300 transition">
+                            info@tropictradesas.com
+                        </a>
                     </div>
 
                     {/* Teléfono */}
@@ -113,14 +123,16 @@ const Footer = () => {
 
             {/* Información de derechos y botón de volver arriba */}
             <div className="max-w-7xl mx-auto px-6 text-center">
-                
+
                 {/* Botón para volver arriba */}
                 <div className="flex justify-center mb-5">
-                    <Link to="inicio" smooth={true} duration={500} offset={-80} aria-label="Volver arriba">
-                        <button className="p-3 bg-amber-300 text-black rounded-full hover:bg-amber-400 transition flex items-center">
-                            <RiArrowUpSLine size={24} />
-                        </button>
-                    </Link>
+                    <button
+                        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                        className="p-3 bg-amber-300 text-black rounded-full hover:bg-amber-400 transition flex items-center"
+                        aria-label="Volver arriba"
+                    >
+                        <RiArrowUpSLine size={24} />
+                    </button>
                 </div>
 
                 {/* Derechos reservados y enlaces */}
@@ -136,9 +148,13 @@ const Footer = () => {
                 </p>
 
                 {/* Políticas */}
-                <div className="mt-2">
-                    <a href="/politica-privacidad" className="text-amber-300 hover:underline">
-                        Política de privacidad y cookies
+                <div className="flex items-center justify-center mt-2 gap-1">
+                    <a href="/politica-de-privacidad" className="text-amber-300 hover:underline">
+                        Política de privacidad
+                    </a> |
+
+                    <a href="/mapa-del-sitio" className="text-amber-300 hover:underline">
+                        Mapa del sitio
                     </a>
                 </div>
             </div>
