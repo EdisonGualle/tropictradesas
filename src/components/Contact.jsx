@@ -9,15 +9,17 @@ const Contact = () => {
     } = useForm();
 
     return (
-        <section id="contacto" className="max-w-5xl mx-auto px-6 py-20">
-            <h3 className="text-center text-gray-700 text-[22px] leading-6">¿Tienes alguna pregunta?</h3>
-            <h2 className="text-center text-[26px] font-bold text-[#1b1464] my-3">
+        <section id="contacto" className="max-w-5xl mx-auto px-6 sm:px-12 lg:px-20 py-20">
+            <h3 className="text-center text-gray-700 text-lg sm:text-xl">
+                ¿Tienes alguna pregunta?
+            </h3>
+            <h2 className="text-center text-2xl sm:text-3xl md:text-[26px] font-bold text-[#1b1464] my-4">
                 ENVÍANOS UN MENSAJE A TRAVÉS DE ESTE FORMULARIO DE CONTACTO
             </h2>
 
-            {/* Formulario sin funcionalidad de envío */}
-            <form onSubmit={handleSubmit(() => { })} className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Formulario */}
+            <form onSubmit={handleSubmit(() => { })} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {/* Nombre */}
                     <div>
                         <label className="block text-gray-700">Nombre</label>
@@ -26,7 +28,7 @@ const Contact = () => {
                             <input
                                 type="text"
                                 {...register("name", { required: "El nombre es obligatorio" })}
-                                className="pl-10 border w-full p-2 rounded"
+                                className="pl-10 border w-full p-3 rounded focus:outline-none focus:ring focus:ring-amber-300"
                                 placeholder="Nombre"
                             />
                         </div>
@@ -44,7 +46,7 @@ const Contact = () => {
                                     required: "El correo es obligatorio",
                                     pattern: { value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Correo no válido" },
                                 })}
-                                className="pl-10 border w-full p-2 rounded"
+                                className="pl-10 border w-full p-3 rounded focus:outline-none focus:ring focus:ring-amber-300"
                                 placeholder="Correo electrónico"
                             />
                         </div>
@@ -52,7 +54,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {/* Teléfono */}
                     <div>
                         <label className="block text-gray-700">Teléfono</label>
@@ -64,7 +66,7 @@ const Contact = () => {
                                     required: "El teléfono es obligatorio",
                                     pattern: { value: /^[0-9]{7,15}$/, message: "Número no válido" },
                                 })}
-                                className="pl-10 border w-full p-2 rounded"
+                                className="pl-10 border w-full p-3 rounded focus:outline-none focus:ring focus:ring-amber-300"
                                 placeholder="Teléfono"
                             />
                         </div>
@@ -77,7 +79,7 @@ const Contact = () => {
                         <input
                             type="text"
                             {...register("subject", { required: "El asunto es obligatorio" })}
-                            className="border w-full p-2 rounded"
+                            className="border w-full p-3 rounded focus:outline-none focus:ring focus:ring-amber-300"
                             placeholder="Asunto"
                         />
                         {errors.subject && <p className="text-red-500 text-sm">{errors.subject.message}</p>}
@@ -91,14 +93,14 @@ const Contact = () => {
                         <RiMessage3Line className="absolute left-3 top-3 text-gray-400" />
                         <textarea
                             {...register("message", { required: "El mensaje no puede estar vacío" })}
-                            className="pl-10 border w-full p-2 rounded h-32 resize-none"
+                            className="pl-10 border w-full p-3 rounded h-32 resize-none focus:outline-none focus:ring focus:ring-amber-300"
                             placeholder="Escribe tu mensaje..."
                         ></textarea>
                     </div>
                     {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
                 </div>
 
-                {/* Botón de Enviar (sin funcionalidad) */}
+                {/* Botón de Enviar */}
                 <button
                     type="submit"
                     disabled={isSubmitting}

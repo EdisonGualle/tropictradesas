@@ -23,14 +23,18 @@ const projectsData = imagePaths.map((path, index) => ({
 // Define el componente ProjectsGrid, recibe 'projects' como prop, y si no se le pasa, usa projectsData por defecto
 const ProjectsGrid = ({ projects = projectsData }) => {
   return (
-    <section id="proyectos" className="py-20 px-4 bg-[#f5f0e1] text-[#1b1464]">
+    <section id="proyectos" className="py-20 px-6 sm:px-12 lg:px-20 bg-[#f5f0e1] text-[#1b1464]">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-[42px] font-bold text-center mb-16">Proyectos</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+        <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-center mb-16">
+          Proyectos
+        </h2>
+
+        {/* Grid de proyectos responsivo */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 w-full">
           {projects.slice(0, 15).map((project, index) => (
             <div key={index} className="relative group">
               <div className="bg-white p-3 shadow-md group-hover:shadow-lg transition-shadow duration-300 rounded-lg overflow-hidden">
-                <div className="aspect-w-1 aspect-h-1">
+                <div className="w-full h-[200px] sm:h-[240px] md:h-[260px] lg:h-[280px] xl:h-[300px] overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}
