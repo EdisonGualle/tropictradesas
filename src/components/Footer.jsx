@@ -100,8 +100,8 @@ const Footer = () => {
                             <RiPhoneLine size={20} className="text-amber-300" />
                             Teléfono:
                         </p>
-                        <a href="tel:0993808146" className="text-gray-300 hover:text-amber-300 transition">
-                            0993808146
+                        <a href="tel:+593986527104" className="text-gray-300 hover:text-amber-300 transition">
+                            0986527104
                         </a>
                     </div>
 
@@ -111,8 +111,8 @@ const Footer = () => {
                             <RiWhatsappLine size={20} className="text-amber-300" />
                             WhatsApp:
                         </p>
-                        <a href="https://api.whatsapp.com/send?phone=593993808146" className="text-gray-300 hover:text-amber-300 transition">
-                            +593 993808146
+                        <a href="https://api.whatsapp.com/send?phone=593986527104" className="text-gray-300 hover:text-amber-300 transition">
+                            +593 986527104
                         </a>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ const Footer = () => {
                 <div className=" mt-2 ">
                     <a href="/politica-de-privacidad" className="text-amber-300 hover:underline">
                         Política de privacidad
-                    </a> | { " "}
+                    </a> | {" "}
 
                     <a href="/mapa-del-sitio" className="text-amber-300 hover:underline">
                         Mapa del sitio
